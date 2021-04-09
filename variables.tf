@@ -1,24 +1,36 @@
 variable "hosted-zone" {
-  type = string
+  type        = string
   default = "hashidemos.io"
 }
 
 variable "namespace" {
-  type = string
-  description = "HashiCorp email prefix"
+  type        = string
+  description = "email prefix"
 }
 
 variable "owner" {
-  type = string
-  description = "The person or group who launched these resources.  Must be a valid HashiCorp email address."
+  type        = string
+  description = "Email address of owner."
 }
 
 variable "azure_location" {
-  type = string
+  type        = string
   default = "westus"
 }
 
 variable "gcp_project" {
-  type = string
+  type        = string
   description = "Existing GCP Project"
+}
+
+variable "create_azure_dns_zone" {
+  type        = bool
+  description = "Whether to create Azure DNS Zone"
+  default     = true
+}
+
+variable "create_gcp_dns_zone" {
+  type        = bool
+  description = "Whether to create GCP DNS Zone"
+  default     = true
 }
