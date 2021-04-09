@@ -1,12 +1,25 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+    azurerm = {
+      source = "hashicorp/azurerm"
+    }
+    google = {
+      source = "hashicorp/google"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 provider "aws" {
-  version = "~> 2.46.0"
-  region  = "us-west-2"   # region is required but doesnt matter
+  region  = "us-west-2"   # region is required but doesn't matter
 }
-provider "google" {
-  version = "~> 3.31.0"
-}
+
+provider "google" {}
+
 provider "azurerm" {
-  version = "~>v2.20.0"
   features {}
 }
 
