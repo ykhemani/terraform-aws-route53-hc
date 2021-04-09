@@ -10,7 +10,7 @@ variable "namespace" {
 
 variable "owner" {
   type = string
-  description = "The person or group who launched these resources.  Must be a valid HashiCorp email prefix."
+  description = "The person or group who launched these resources.  Must be a valid HashiCorp email address."
 }
 
 variable "azure_location" {
